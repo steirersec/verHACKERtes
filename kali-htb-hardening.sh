@@ -43,6 +43,7 @@ apt-get install rkhunter -y
 rkhunter --update
 rkhunter -c
 #tools to install
+apt install python3-pip -y
 apt install apt-transport-https -y
 apt install neo4j -y
 apt install bloodhound -y
@@ -75,4 +76,9 @@ git clone https://github.com/Hackplayers/evil-winrm.git
 #apt --fix-broken install
 #apt autoclean -y
 #apt autoremove -y
+
+#malware-analysis
+pip3 install -U oletools
+git clone https://github.com/DidierStevens/DidierStevensSuite.git
+
 
