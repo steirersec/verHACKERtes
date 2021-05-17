@@ -8,7 +8,6 @@ apt-get upgrade -y
 apt-get dist-upgrade -y
 #system settings
 setxkbmap -layout de
-sudo passwd
 #FOLDERS
 cd /home/user/Desktop
 mkdir 01_TOOLS
@@ -17,6 +16,7 @@ mkdir /home/user/Desktop/02_HTBs/VPNS/
 mkdir 03_CHECKS
 cd 01_TOOLS
 mkdir /home/user/Desktop/01_TOOLS/github/
+mkdir /home/user/Desktop/01_TOOLS/github/wordlists/
 mkdir /home/user/Desktop/01_TOOLS/github/windows/
 mkdir /home/user/Desktop/01_TOOLS/github/linux/
 cd /home/user/Desktop/03_CHECKS
@@ -43,12 +43,19 @@ apt-get install rkhunter -y
 rkhunter --update
 rkhunter -c
 #tools to install
+apt install python3-pip -y
 apt install apt-transport-https -y
 apt install neo4j -y
 apt install bloodhound -y
 apt install powershell -y
 apt install crackmapexec -y
-apt install eyewitness
+apt install eyewitness -y
+apt install exploitdb -y
+
+#github tools
+cd  /home/user/Desktop/01_TOOLS/github/wordlists/
+git clone https://github.com/danielmiessler/SecLists.git
+
 #github tools
 cd /home/user/Desktop/01_TOOLS/github/windows/
 #DSINTERNALS
@@ -75,4 +82,10 @@ git clone https://github.com/Hackplayers/evil-winrm.git
 #apt --fix-broken install
 #apt autoclean -y
 #apt autoremove -y
+
+#malware-analysis
+pip3 install -U oletools
+git clone https://github.com/DidierStevens/DidierStevensSuite.git
+
+
 
